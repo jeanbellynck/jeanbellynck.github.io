@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -9,18 +6,9 @@
     <title>Unity WebGL Player | GroupFactorizer</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <style>
-      #unity-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Full height of the viewport */
-        width: 100vw; /* Full width of the viewport */
-      }
-    </style>
   </head>
   <body>
-    <div id="unity-container" class="unity-desktop">
+    <div id="unity-container" class="unity-desktop" style="display: table; width: 100%; height: 100%; align-items: center;">
       <canvas id="unity-canvas" tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
@@ -102,8 +90,8 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "80%" //innerWidth + "px";
-        canvas.style.height = "80%" //innerHeight + "px";
+        canvas.style.width = innerWidth + "px";
+        canvas.style.height = innerHeight + "px";
       }
 
 
