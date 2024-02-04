@@ -125,6 +125,11 @@ footer * {
     text-align: center;
 }
 
+.navbar{
+    position: sticky;
+    top: 0;
+}
+
 ul.navbar {
     margin: 0;
     list-style-type: none;
