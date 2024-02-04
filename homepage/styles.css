@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+    --xsmall: 320px;
+    --small: 480px;
+    --medium: 782px;
+    --header: 900px;
+    --large: 1224px;
+    --xl: 1432px;
+    --xxl: 1640;
+    --as-gray-100: #fafafa;
+    --as-gray-200: #f5f5f5;
+    --as-gray-300: #e6e6e6;
+    --as-gray-400: #ccc;
+    --as-gray-500: #999;
+    --as-gray-600: #4d4d4d;
+    --as-gray-700: #0a0a0a;
+    --as-red-200: #f8d3d3;
+    --as-red-300: #e44e4e;
+    --as-red-400: #b11b1b;
+    --as-red-500: #851414;
+    --as-red-600: #390909;
+    --as-teal-200: #dceeef;
+    --as-teal-300: #aad6da;
+    --as-teal-400: #4698a0;
+    --as-teal-500: #36767c;
+    --as-teal-600: #224a4e;
+    --as-blue-200: #98dbec;
+    --as-blue-300: #35b2d4;
+    --as-blue-600: #073a4a;
+    --as-gold-100: #fdfbce;
+    --as-gold-200: #fbf8a7;
+    --as-gold-400: #f5ed0f;
+    --as-gold-500: #b6b007;
+    --as-foam-200: #f4f6f4;
+    --as-foam-400: #9fad9f;
+    --as-foam-600: #465346;
+    --as-white: #fff;
+    --as-black: #000;
+    --border-width: 1px;
+    --border-color: var(--as-gray-400);
+    --border-radius: 4px;
+    --margin-1: 1rem;
+    --margin-2: 2rem;
+    --margin-3: 2rem;
+    --margin-4: 2rem;
+    --margin-6: 2rem;
+    --space: 2rem
+}
+
+
+:root {
+    --base-font-size: 24px;
+    --base-16: 0.666rem;
+    --base-18: 0.75rem;
+    --base-20: 0.75rem;
+    --base-24: 0.75rem;
+    --base-28: 1rem;
+    --base-36: 1rem;
+    --base-48: 1.2rem;
+    --base-56: 1.2rem;
+    --base-64: 1.5rem;
+    --base-84: 1.5rem;
+    --light: 200;
+    --regular: 400;
+    --semi: 600;
+    --heavy: 800;
+    --font-sans: "canada-type-gibson", sans-serif;
+    --font-serif: "Merriweather", serif;
+    --line-height: 1.5;
+    --line-width: 60ch
+}
+
+
+html {
+    margin: 0; /* reset margin */
+    padding: 0; /* reset padding */
+    font-size: var(--base-font-size);
+    scroll-behavior: smooth;
+    scroll-padding: 3rem
+}
+
+
+body {
+    color: var(--as-gray-700);
+    font-family: var(--font-sans);
+    font-size: var(--base-24);
+    font-weight: var(--light);
+    line-height: var(--line-height);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header, footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+header {
+    position: fixed;
+    top: 0;
+}
+
+header * {
+    font-size: var(--base-16);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer {
+    bottom: 0;
+}
+
+footer * {
+    font-size: var(--base-16);
+    color: white;
+    text-align: center;
+}
+
+ul.navbar {
+    margin: 0;
+    list-style-type: none;
+}
+
+li.navbar {
+    float: right;
+}
+
+a.navbar {
+    display: block;
+    padding: 14px 16px;
+}
+
+li a.navbar:hover {
+    background-color: #111;
+}
+
+.banner {
+    background-image: url('Banner.png'); /* replace with the path to your image */
+    height: 500px; /* adjust this value to change the height of the banner */
+    background-position: center; /* center the image */
+    background-repeat: no-repeat; /* prevent the image from repeating */
+    background-size: cover; /* resize the image to cover the entire div */
+}
+
+
+div.title {
+    margin-bottom: 2rem;
+    width: 70%;
+    /* makes the title div take up only 50% of the available width */
+}
+
+h1,
+h2,
+h3,
+h4 {
+    clear: both;
+    color: var(--as-gray-700);
+    font-family: var(--font-sans);
+    font-weight: var(--regular);
+    line-height: 1;
+    margin: 0
+}
+
+h1.title {
+    font-family: var(--font-serif);
+    font-weight: var(--heavy);
+    line-height: 1.5;
+    /* adjust this value to increase the line spacing */
+}
+
+h2.title {
+    font-family: var(--font-serif);
+    font-weight: var(--light);
+    line-height: 1.3;
+    /* adjust this value to increase the line spacing */
+}
+
+h2 {
+    font-size: var(--base-20);
+    font-weight: var(--semi);
+}
+
+h3 {
+    font-weight: var(--semi);
+    margin-top: 2.5em
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: var(--semi);
+    line-height: 1.25em
+}
+
+
+.profile-card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.person {
+    display: flex;
+    gap: 80px;
+    /* adjust this value to create space between the profile card and the content */
+    margin-top: 100px;
+    margin-left: 20%;
+    /* adjust this value to create space on the left side */
+    margin-right: 20%;
+    margin-bottom: 300px;
+
+    /* adjust this value to create space on the right side */
+}
+
+.content {
+    flex: 3;
+    /* adjust this value to change the width of the content */
+}
+
+.profile-card {
+    flex: 1;
+    /* adjust this value to change the width of the profile card */
+}
+
+.copyright {
+    display: block;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* adjust this value to increase or decrease the space between the icons */
+    padding-bottom: 30px;
+
+}
+
+.socialmedia *{
+    font-size: var(--base-64);
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+
+    text-align: center;
+}
