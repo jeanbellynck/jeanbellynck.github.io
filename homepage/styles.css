@@ -143,7 +143,7 @@ li a.navbar:hover {
 
 .banner {
     background-image: url('Banner.png'); /* replace with the path to your image */
-    height: 500px; /* adjust this value to change the height of the banner */
+    width: 100%; /* make the banner fill the width of the page */
     background-position: center; /* center the image */
     background-repeat: no-repeat; /* prevent the image from repeating */
     background-size: cover; /* resize the image to cover the entire div */
@@ -200,8 +200,8 @@ h4 {
 
 
 .profile-card img {
-    width: 300px;
-    height: 300px;
+    width: 100%; /* make the banner fill the width of the container */
+    height: auto;  /* adjust the height automatically */
     border-radius: 50%;
     margin-right: 20px;
 }
@@ -225,7 +225,7 @@ h4 {
 }
 
 .profile-card {
-    flex: 1;
+    flex: 2;
     /* adjust this value to change the width of the profile card */
 }
 
