@@ -142,11 +142,8 @@ li a.navbar:hover {
 }
 
 .banner {
-    background-image: url('Banner.png'); /* replace with the path to your image */
-    width: 100%; /* make the banner fill the width of the page */
-    background-position: center; /* center the image */
-    background-repeat: no-repeat; /* prevent the image from repeating */
-    background-size: cover; /* resize the image to cover the entire div */
+    width: 100%; /* make the banner fill the width of the container */
+    height: auto;  /* adjust the height automatically */
 }
 
 
