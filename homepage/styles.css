@@ -125,29 +125,29 @@ footer * {
     text-align: center;
 }
 
-.navbar{
+.navigationbar{
     position: sticky;
     top: 0;
 }
 
-ul.navbar {
+ul.navigationbar {
     margin: 0;
     list-style-type: none;
 }
 
-li.navbar {
+li.navigationbar {
     float: right;
     margin: 0;
     padding: 0;
 }
 
-a.navbar {
+a.navigationbar {
     display: block;
     margin: 0;
     padding: 14px 16px;
 }
 
-li a.navbar:hover {
+li a.navigationbar:hover {
     background-color: #111;
 }
 
