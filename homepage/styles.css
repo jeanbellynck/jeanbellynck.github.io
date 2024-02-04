@@ -74,8 +74,10 @@
 
 
 html {
-    margin: 0; /* reset margin */
-    padding: 0; /* reset padding */
+    margin: 0;
+    /* reset margin */
+    padding: 0;
+    /* reset padding */
     font-size: var(--base-font-size);
     scroll-behavior: smooth;
     scroll-padding: 3rem
@@ -93,7 +95,8 @@ body {
     overflow-x: hidden;
 }
 
-header, footer {
+header,
+footer {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -130,10 +133,13 @@ ul.navbar {
 
 li.navbar {
     float: right;
+    margin: 0;
+    padding: 0;
 }
 
 a.navbar {
     display: block;
+    margin: 0;
     padding: 14px 16px;
 }
 
@@ -142,8 +148,10 @@ li a.navbar:hover {
 }
 
 .banner {
-    width: 100%; /* make the banner fill the width of the container */
-    height: auto;  /* adjust the height automatically */
+    width: 100%;
+    /* make the banner fill the width of the container */
+    height: auto;
+    /* adjust the height automatically */
 }
 
 
@@ -197,15 +205,17 @@ h4 {
 
 
 .profile-card img {
-    width: 100%; /* make the banner fill the width of the container */
-    height: auto;  /* adjust the height automatically */
+    width: 100%;
+    /* make the banner fill the width of the container */
+    height: auto;
+    /* adjust the height automatically */
     border-radius: 50%;
     margin-right: 20px;
 }
 
 .person {
     display: flex;
-    gap: 10%px;
+    gap: 100px;
     /* adjust this value to create space between the profile card and the content */
     margin-top: 100px;
     margin-left: 20%;
@@ -214,6 +224,13 @@ h4 {
     margin-bottom: 300px;
 
     /* adjust this value to create space on the right side */
+}
+
+@media screen and (max-width: 1000px) {
+    .person {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .content {
@@ -238,12 +255,13 @@ h4 {
 .socialmedia {
     display: flex;
     justify-content: center;
-    gap: 20px; /* adjust this value to increase or decrease the space between the icons */
+    gap: 20px;
+    /* adjust this value to increase or decrease the space between the icons */
     padding-bottom: 30px;
 
 }
 
-.socialmedia *{
+.socialmedia * {
     font-size: var(--base-64);
     color: #333;
     text-align: center;
