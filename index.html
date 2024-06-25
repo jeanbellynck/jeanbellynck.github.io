@@ -26,16 +26,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" defer>
     <link rel="stylesheet" media="all" href="homepage/styles.css">
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
+    <script> 
+        $(function(){
+          $("#header").load("homepage/header.html"); 
+          $("#footer").load("homepage/footer.html"); 
+        });
+    </script> 
 
-    <header class="navigationbar">
-        <ul class="navigationbar">
-            <li class="navigationbar"><a class="navigationbar" href="publications.html">Publications</a></li>
-            <li class="navigationbar"><a class="navigationbar" href="index.html">About</a></li>
-        </ul>
-    </header>
+    <div id="header"></div>
 
     <img class="banner" src="homepage/BannerBig.WebP" alt="Banner">
 
@@ -127,11 +134,10 @@
         </a>
     </div>
 
-    <footer>
-        <div class="copyright"> © Copyright 2024 Jean-Baptiste Bellynck. Hosted by <a href="https://pages.github.com/"
-                target="_blank" rel="external nofollow noopener">GitHub
-                Pages</a>. Last updated: 04.February.2024. </div>
-    </footer>
+    
+    <!--Remaining section-->
+    <div id="footer"></div>
+    
 </body>
 
 </html>
