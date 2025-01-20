@@ -1,6 +1,7 @@
 
 
 function setup() {
+
   frameRate(10);
   padding = 200;
   widthPerSquare = 100;
@@ -10,87 +11,60 @@ function setup() {
   
   actualWidth = (2*maxX)  * widthPerSquare + 2*padding;
   actualHeight = maxY * widthPerSquare + 2*padding;
-  createCanvas(actualWidth, actualHeight);
+  let myCanvas = createCanvas(actualWidth, actualHeight);
+  // Embed into html
+  myCanvas.parent('myContainer1');
 
-
-
-
-
-  //Set Cell Stroke Weight
-	voronoiCellStrokeWeight(1);
-	//Set Site Stroke Weight
-	voronoiSiteStrokeWeight(3);
-	//Set Cell Stroke
-	voronoiCellStroke(0);
-	//Set Site Stroke
-	voronoiSiteStroke(0);
-	//Set flag to draw Site
-	voronoiSiteFlag(true);
-
-
-	//Add array of custom sites
-	voronoiSites([[5,5],[10,5],[15,5]]);
-
-	//Add array of custom sites with custom colors associated (255 = white)
-	voronoiSites([[5,20,255],[10,20,255],[15,20,255]]);
-
-	//Remove custom site with coordinates 15,5
-	voronoiRemoveSite(15, 5);
-
-
-	//Add custom site with coordinates i*30,50
-	for (var i = 0; i < 10; i++) {
-		voronoiSite(i * 30, 50);
-	}
-
-	//Add custom site with custom color at coordinates 50,100 (255 = white)
-	voronoiSite(50, 100, 255);
-
-	//Clear custom sites (does not clear random sites)
-	//voronoiClearSites();
-
-	//Jitter Settings (These are the default settings)
-
-	//Compute voronoi diagram with size 700 by 500
-	//With a prepared jitter structure (true)
+  view = 1;
 }
 
 
 function draw() {
-  background(220);
-  voronoiClearSites();
-  
-  // Get mouse position in math units
-  let mousePos = createVector(mouseX, mouseY);
-  points = getPSL2ZPoints(screenToMath(mousePos), 2, 0);
-  strokeWeight(10);
-  point(mousePos);
+  // If anything goes wrong dont draw anything new
+  try {
+    voronoiClearSites();
+    // Calculate the voronoi diagram
+    let mousePos = createVector(mouseX, mouseY);
+    points = []
+    getPSL2ZPoints(screenToMath(mousePos), 0.1);
 
-  print("points: " + points);
+    voronoi(2*maxX*widthPerSquare, maxY*widthPerSquare, false);
 
-  // Draw points
-  /*
-  for (let i = 0; i < points.length; i++) {
-    //print(points[i]);
-    let p = points[i];
-    point(mathToScreen(p));
-  }*/
+    // Draw
+    background(220);
 
+    let voronoiPos = mathToScreen(createVector(-maxX,maxY));
+    voronoiDraw(voronoiPos.x, voronoiPos.y, true, false);
+    
+    //
+    if(view == 1) {
+      drawPSL2ZCircles();
+    } else if (view == 2) {
+      drawFareyCircles();
+    }
+    drawNumberAxes();
 
+  } catch (e) {
+    print(e);
+  }
+}
 
-	voronoi(2*maxX*widthPerSquare, maxY*widthPerSquare, false);
-	let voronoiPos = mathToScreen(createVector(-maxX,maxY));
-  voronoiDraw(voronoiPos.x, voronoiPos.y, true, false);
-  //voronoiDraw(voronoiPos.x, voronoiPos.y, true, false);
-
-  drawNumberAxes();
+function keyPressed() {
+  if (key === '1') {
+    view = 1;
+  }
+  if (key === '2') {
+    view = 2;
+  }
+  if (key === '3') {
+    view = 3;
+  }
 }
 
 function drawNumberAxes() {
   // Draw the x axis
   strokeWeight(1);
 
-  print("maxX: " + maxX);
   let xAxisStart = mathToScreen(createVector(-maxX,0));
   let xAxisEnd = mathToScreen(createVector(maxX,0));
   line(xAxisStart.x, xAxisStart.y,xAxisEnd.x, xAxisEnd.y);
@@ -124,42 +98,154 @@ function screenToMath(p) {
   return createVector((p.x - maxX*widthPerSquare - padding) / widthPerSquare, maxY-(p.y - padding) / widthPerSquare);
 }
 
-function getPSL2ZPoints(originalPoint, iterations) {
+
+function getPSL2ZPoints(originalPoint, accuracy) {
   let modulo = 0;
   let pPos = mathToScreen(originalPoint);
-  voronoiSite(pPos.x-padding, pPos.y-padding, moduloToColor(modulo));
-  movePoints(originalPoint,iterations, modulo);
-  invertPoint(originalPoint, iterations, modulo);
+  voronoiSite(pPos.x-padding, pPos.y-padding, elementToColor(""));
+  movePoints(originalPoint,accuracy, "");
+  invertPoint(originalPoint, accuracy, "");
+
+
   
 }
 
-function movePoints(originalPoint, iterations, modulo1) {
-  if (iterations == 0) {
-    return;
-  }else{
-    iterations--;
-  }
-  for (let i = -4; i <= 4; i+=1) {
+function movePoints(originalPoint, accuracy, element) {
+  let movedPoints = [];
+  for (let i = -2*maxX; i <= 2*maxX; i+=1) {
     if (i == 0) {
       continue;
     }
     let newPoint = createVector(originalPoint.x + i, originalPoint.y);
+    if(newPoint.x < -maxX || newPoint.x > maxX || newPoint.y < accuracy || inPointCloud(newPoint, accuracy)) {continue};
+    points.push(newPoint);
     let pPos = mathToScreen(newPoint);
-    voronoiSite(pPos.x-padding, pPos.y-padding, moduloToColor(modulo1+i));
-    invertPoint(newPoint, iterations, modulo1+i);
+    let newElement;
+    if(i < 0) {
+      newElement = element + ("L".repeat(-i)); 
+    } else {
+      newElement = element + ("R".repeat(i));
+    }
+    voronoiSite(pPos.x-padding, pPos.y-padding, elementToColor(newElement));
+    movedPoints[i] = newPoint;
+  }
+  // We do two seperate loops to make sure that the points are in the right order
+  for (let i = -2*maxX; i <= 2*maxX; i+=1) {
+    if(movedPoints[i] == undefined) {continue;}
+    if(i < 0) {
+      newElement = element + ("L".repeat(-i)); 
+    } else {
+      newElement = element + ("R".repeat(i));
+    }
+    invertPoint(movedPoints[i], accuracy, newElement);
+  }
+
+}
+
+function invertPoint(point, accuracy, element) {
+  let newPoint = createVector(-point.x/point.magSq(), point.y/point.magSq());
+  if(newPoint.x < -maxX || newPoint.x > maxX || newPoint.y < accuracy || inPointCloud(newPoint, accuracy)) {return;}
+  points.push(newPoint);
+  let pPos = mathToScreen(newPoint);
+  let newElement = element + "Q";
+  voronoiSite(pPos.x-padding, pPos.y-padding, elementToColor(newElement));
+  movePoints(newPoint, accuracy, newElement);
+}
+
+function inPointCloud(point, accuracy) {
+  // Check if the point is in the set (or in the accuracy-neighbourhood)
+  for (let i = 0; i < points.length; i++) {
+    let p = points[i];
+    if (p.dist(point) < accuracy) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function elementToColor(element) {
+  element = element.replace(/RQRQRQ/g, "");
+  element = element.replace(/LQLQLQ/g, "");
+  element = element.replace(/QRQRQR/g, "");
+  element = element.replace(/QLQLQL/g, "");
+  element = element.replace(/QQ/g, "");
+  if(view < 4) {
+    // Remove any "RQRQRQ" or "LQLQLQ" from the element
+
+    // Count the R's in the element
+    let modulo = 0;
+    modulo = modulo + element.split("R").length - 1;
+    modulo = modulo - element.split("L").length - 1;
+    modulo = modulo - element.split("Q").length - 1;
+
+    if ((modulo+2000)%2 == 0) return color(200,100,100);
+    if ((modulo+2000)%2 == 1) return color(100,200,100);
+  } else {
+    print(element);
+    let qCount = element.split("Q").length - 1;
+    if(qCount == 0) return color(200,100,100);
+    if(qCount == 1) {
+      let firstWord = element.split("Q")[0];
+      let modulo = 0;
+      modulo = modulo + firstWord.split("R").length - 1;
+      modulo = modulo - firstWord.split("L").length - 1;
+      return color(100,150 + modulo*20,100);
+    }
+    if(qCount > 1) return color(255, 255, 255);
+  }
+  
+}
+
+function drawPSL2ZCircles() {
+  strokeWeight(2);
+  for (let i = -maxX; i < maxX; i++) {
+    let lineStart = mathToScreen(createVector(i+0.5,0));
+    let lineEnd = mathToScreen(createVector(i+0.5,maxY));
+    line(lineStart.x, lineStart.y, lineEnd.x, lineEnd.y);
+  }
+  for (let i = -maxX; i < maxX; i++) {
+    let center = mathToScreen(createVector(i,0));
+    let radius = widthPerSquare;
+    noFill();
+    if (i - 1 < -maxX || i + 1 > maxX) {continue;}
+    arc(center.x, center.y, 2*radius, 2*radius, PI, 2*PI);
+  }
+  for (let i = -maxX; i < maxX; i++) {
+    let footpoint1 = mathToScreen(createVector(i - 2.0/3,0));
+    let footpoint2 = mathToScreen(createVector(i, 0));
+    let footpoint3 = mathToScreen(createVector(i+ 2.0/3,0));
+    noFill();
+    if (i - 2/3 < -maxX || i+ 2/3 > maxX) {continue;}
+    let diameter = (footpoint2.x - footpoint1.x);
+    print(diameter);
+    arc((footpoint2.x + footpoint1.x)/2, footpoint1.y, diameter, diameter, PI, 2*PI);
+    arc((footpoint3.x + footpoint2.x)/2, footpoint2.y, diameter, diameter, PI, 2*PI);
   }
 }
 
-function invertPoint(point, iterations, modulo) {
-  let invP = createVector(-point.x/point.magSq(), point.y/point.magSq());
-  let pPos = mathToScreen(invP);
-  voronoiSite(pPos.x-padding, pPos.y-padding, moduloToColor(modulo-1));
-  movePoints(invP, iterations, modulo-1);
+function drawFareyCircles() {
+  strokeWeight(2);
+  for (let i = -maxX; i < maxX; i++) {
+    let lineStart = mathToScreen(createVector(i,0));
+    let lineEnd = mathToScreen(createVector(i,maxY));
+    line(lineStart.x, lineStart.y, lineEnd.x, lineEnd.y);
+  }
+  for (let i = -maxX; i < maxX; i++) {
+    let center = mathToScreen(createVector(i+0.5,0));
+    let radius = widthPerSquare / 2;
+    noFill();
+    if (i - 1 < -maxX || i + 1 > maxX) {continue;}
+    arc(center.x, center.y, 2*radius, 2*radius, PI, 2*PI);
+  }
+  for (let i = -maxX; i < maxX; i++) {
+    let footpoint1 = mathToScreen(createVector(i - 1.0/2,0));
+    let footpoint2 = mathToScreen(createVector(i, 0));
+    let footpoint3 = mathToScreen(createVector(i+ 1.0/2,0));
+    noFill();
+    if (i - 2/3 < -maxX || i+ 2/3 > maxX) {continue;}
+    let diameter = (footpoint2.x - footpoint1.x);
+    print(diameter);
+    arc((footpoint2.x + footpoint1.x)/2, footpoint1.y, diameter, diameter, PI, 2*PI);
+    arc((footpoint3.x + footpoint2.x)/2, footpoint2.y, diameter, diameter, PI, 2*PI);
+  }
 }
-
-function moduloToColor(modulo2) {
-  if ((modulo2+20)%2 == 0) return color(200,100,100);
-  if ((modulo2+20)%2 == 1) return color(100,200,100);
-  //if ((modulo2+30)%3 == 2) return color(100,100,200);
-}
-
