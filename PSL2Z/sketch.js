@@ -39,7 +39,7 @@ function draw() {
     //
     if(view == 1) {
       drawPSL2ZCircles();
-    } else if (view == 2) {
+    } else if (view == 2 || view == 4) {
       drawFareyCircles();
     }
     drawNumberAxes();
@@ -58,6 +58,9 @@ function keyPressed() {
   }
   if (key === '3') {
     view = 3;
+  }
+  if (key === '4') {
+    view = 4;
   }
 }
 
@@ -169,6 +172,8 @@ function elementToColor(element) {
   element = element.replace(/QRQRQR/g, "");
   element = element.replace(/QLQLQL/g, "");
   element = element.replace(/QQ/g, "");
+  element = element.replace(/RL/g, "");
+  element = element.replace(/LR/g, "");
   if(view < 4) {
     // Remove any "RQRQRQ" or "LQLQLQ" from the element
 
@@ -181,17 +186,12 @@ function elementToColor(element) {
     if ((modulo+2000)%2 == 0) return color(200,100,100);
     if ((modulo+2000)%2 == 1) return color(100,200,100);
   } else {
-    print(element);
-    let qCount = element.split("Q").length - 1;
-    if(qCount == 0) return color(200,100,100);
-    if(qCount == 1) {
-      let firstWord = element.split("Q")[0];
-      let modulo = 0;
-      modulo = modulo + firstWord.split("R").length - 1;
-      modulo = modulo - firstWord.split("L").length - 1;
-      return color(100,150 + modulo*20,100);
-    }
-    if(qCount > 1) return color(255, 255, 255);
+    let modulo = 0;
+    modulo = modulo + element.split("R").length - 1;
+    modulo = modulo - element.split("L").length - 1;
+    if ((modulo+2000)%3 == 0) return color(200,100,100);
+    if ((modulo+2000)%3 == 1) return color(100,200,100);
+    if ((modulo+2000)%3 == 2) return color(100,100,200);
   }
   
 }
