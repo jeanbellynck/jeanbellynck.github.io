@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>🪴 Quartz 4.0</title>
-      <link>https://quartz.jzhao.xyz</link>
-      <description>Last 10 notes on 🪴 Quartz 4.0</description>
+      <title>Jean&#039;s Lexicon of Maths</title>
+      <link>https://jeanbellynck.github.io</link>
+      <description>Last 10 notes on Jean&#039;s Lexicon of Maths</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>Gerkmann - Stexkurs Algebra</title>
-    <link>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Gerkmann---Stexkurs-Algebra</link>
-    <guid>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Gerkmann---Stexkurs-Algebra</guid>
+    <link>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Gerkmann---Stexkurs-Algebra</link>
+    <guid>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Gerkmann---Stexkurs-Algebra</guid>
     <description>Questions TASK WHERE veranstaltung.file = this.file GROUP By &quot;[[&quot;+file.name+&quot;]]&quot; Content SubjectDetailed Content .</description>
-    <pubDate>Mon, 14 Apr 2025 08:57:28 GMT</pubDate>
+    <pubDate>Mon, 14 Apr 2025 09:06:48 GMT</pubDate>
   </item><item>
     <title>Zenk - Stexkurs Analysis</title>
-    <link>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Zenk---Stexkurs-Analysis</link>
-    <guid>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Zenk---Stexkurs-Analysis</guid>
+    <link>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Zenk---Stexkurs-Analysis</link>
+    <guid>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Zenk---Stexkurs-Analysis</guid>
     <description>Questions TASK WHERE veranstaltung.file = this.file GROUP By &quot;[[&quot;+file.name+&quot;]]&quot; Content SubjectDetailed Content30 Komplexe AnalysisHarmonic function34 ...</description>
-    <pubDate>Mon, 14 Apr 2025 08:57:28 GMT</pubDate>
+    <pubDate>Mon, 14 Apr 2025 09:06:48 GMT</pubDate>
   </item><item>
     <title>index</title>
-    <link>https://quartz.jzhao.xyz/</link>
-    <guid>https://quartz.jzhao.xyz/</guid>
+    <link>https://jeanbellynck.github.io/</link>
+    <guid>https://jeanbellynck.github.io/</guid>
     <description>...</description>
-    <pubDate>Mon, 14 Apr 2025 08:57:28 GMT</pubDate>
+    <pubDate>Mon, 14 Apr 2025 09:06:48 GMT</pubDate>
   </item><item>
     <title>Deckert - Stochastik</title>
-    <link>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Deckert---Stochastik</link>
-    <guid>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Deckert---Stochastik</guid>
+    <link>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Deckert---Stochastik</link>
+    <guid>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Deckert---Stochastik</guid>
     <description>Description Questions TASK WHERE veranstaltung.file = this.file GROUP By &quot;[[&quot;+file.name+&quot;]]&quot; Content SubjectDetailed ContentAbzählbar Unendliche ...</description>
-    <pubDate>Mon, 14 Apr 2025 08:57:28 GMT</pubDate>
+    <pubDate>Mon, 14 Apr 2025 09:06:48 GMT</pubDate>
   </item><item>
     <title>Hayano - Stability of non-proper functions</title>
-    <link>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Hayano---Stability-of-non-proper-functions</link>
-    <guid>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Hayano---Stability-of-non-proper-functions</guid>
+    <link>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Hayano---Stability-of-non-proper-functions</link>
+    <guid>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Hayano---Stability-of-non-proper-functions</guid>
     <description>Description Questions TASK WHERE veranstaltung.file = this.file GROUP By &quot;[[&quot;+file.name+&quot;]]&quot; Content SubjectDetailed ContentDerivationenSchnittkeimFaserungenPullback-BündelJetbündelJetbündel, ...</description>
-    <pubDate>Mon, 14 Apr 2025 08:57:28 GMT</pubDate>
+    <pubDate>Mon, 14 Apr 2025 09:06:48 GMT</pubDate>
   </item><item>
     <title>Hensel - Differentiable Manifolds</title>
-    <link>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Hensel---Differentiable-Manifolds</link>
-    <guid>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Hensel---Differentiable-Manifolds</guid>
+    <link>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Hensel---Differentiable-Manifolds</link>
+    <guid>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Hensel---Differentiable-Manifolds</guid>
     <description>Questions TASK WHERE veranstaltung.file = this.file GROUP By &quot;[[&quot;+file.name+&quot;]]&quot; Content SubjectDetailed ContentAbbildungen zwischen MannigfaltigkeitenGlatte ...</description>
-    <pubDate>Mon, 14 Apr 2025 08:57:28 GMT</pubDate>
+    <pubDate>Mon, 14 Apr 2025 09:06:48 GMT</pubDate>
   </item><item>
     <title>Philip - Numerik</title>
-    <link>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Philip---Numerik</link>
-    <guid>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Philip---Numerik</guid>
+    <link>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Philip---Numerik</link>
+    <guid>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Philip---Numerik</guid>
     <description>Description Questions TASK WHERE veranstaltung.file = this.file GROUP By &quot;[[&quot;+file.name+&quot;]]&quot; Content SubjectDetailed ContentAbschätzungenFehlerabschätzungen ...</description>
-    <pubDate>Mon, 14 Apr 2025 08:57:28 GMT</pubDate>
+    <pubDate>Mon, 14 Apr 2025 09:06:48 GMT</pubDate>
   </item><item>
     <title>Gerkmann - Algebra und Zahlentheorie (Tutor)</title>
-    <link>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Gerkmann---Algebra-und-Zahlentheorie-(Tutor)</link>
-    <guid>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Gerkmann---Algebra-und-Zahlentheorie-(Tutor)</guid>
+    <link>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Gerkmann---Algebra-und-Zahlentheorie-(Tutor)</link>
+    <guid>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Gerkmann---Algebra-und-Zahlentheorie-(Tutor)</guid>
     <description>Description Questions TASK WHERE veranstaltung.file = this.file GROUP By &quot;[[&quot;+file.name+&quot;]]&quot; Content SubjectDetailed Content1. StrukturSatz von Lagrange11 ZahlentheorieGroßer Satz von Fermat, Pythagoräisches Tripel, Zahl als Summe von Quadraten16 Assoziative Ringe und AlgebrenCharakteristik (Ring)2-dimensionale Euklidische GeometrieEuklidische Konstruktion, Euklidische Werkzeuge, Konstruierbare ZahlenAbelsche GruppenAbelian groupAlgebraische ErweiterungenAlgebraische Erweiterung, Einfacher Algebraisch Erzeugter ZwischenkörperAlgebraische KörpertheorieAlgebraische UnabhängigkeitAlternierende GruppeAlternierende GruppeAuflösbarkeitAbelsche Normalreihe, Commutator group, Kommutator, NormalreiheAutomorphismenAutomorphismengruppe, Group automorphismBegriffe von HadlockTransitive GaloisgruppeBeispielerweiterungenEinfach Erzeugter Zwischenkörper, Erzeugter ZwischenkörperBekannte ZahlenStellenwertsystemDiedergruppenDiedergruppeDirektes ProduktInneres Direktes Produkt (Gruppe), Äußeres Direktes Produkt (Gruppe)Einfache GruppeEinfache GruppeEndlich erzeugte Abelsche GruppeEndlich Erzeugte Abelsche Gruppe, Hauptsatz über endlich erzeugte Abelsche GruppeEndlich erzeugte GruppeEndlich Erzeugte GruppeEndliche Abelsche GruppenTorsionsuntergruppeEndliche GruppenEndliche GruppeEndliche KörperEndlicher Körper, Körper von PrimzahlgrößeErklärungen GruppeErklärung zu GruppenErweiterungenbegriffeErweiterungskörper, ZwischenkörperErzeugendensystemeErzeugendensystemExponentExponent (Gruppe)Faktorielle RingeRepräsentantensystem der PrimelementeFibonnacci ZahlenFibbonacci ZahlenGaloisgruppen spezieller ErweiterungenFrobenius-Automorphismus, Galoisgruppe endlicher Körper, Galoisgruppe von KreisteilungspolynomenGaloisgruppen von Polynomen vierten GradesGaloisgruppen von Polynomen vierten GradesGaloistheorieGalois-Erweiterung, Galoisgruppe eines PolynomsGaußsche ZahlenGaußsche ZahlenGruppenhomomorphismusInduzierter Homomorphismus (Faktorgruppe)GruppenoperationenConjugation (subgroup), Group action, GruppenoperationHalbgruppeHalbgruppeHauptsatz der GaloistheorieFixkörper, Galoisgruppe, Hauptsatz der GaloistheorieHomomorphiesatzHomomorphiesatz für GruppenHomomorphismenIsomorphismusHomomorphismusGroup homomorphism, Gruppenhomomorphismus, Gruppenisomorphismus, KernIntegral domainEigenschaften von Nicht-IntegritätsbereichenIrreduzibilitätskriterienReduktionskriterium, Satz über Quotienten, Vorlesung über IrreduzibiltätskriterienKategorienKategorieKlassifikationen von GruppenKlassifikation von Gruppen (Elementare Gruppentheorie)Klein 4-GruppeKlein 4-GruppeKonjugationsklassenKonjugationsklasseKonstruktion der QuadratwurzelKonstruktion der QuadratwurzelKonstruktion eines ProduktesKonstruktion eines ProduktesKonstruktion eines QuotientenKonstruktion eines QuotientenKörperfunktionenDiskreter LogarithmusKörperhomomorphismenFortsetzung eines Körperhomomorphismus, K-Homomorphismus, Körperautomorphismus, KörperisomorphismusKreisteilungspolynomeEinheitswurzel, Faktorisierung von Kreisteilungspolynomen in endlichen Körpern, Potenzenzykel, Primitive EinheitswurzelLösbarkeit von PolynomenAuflösbar durch Radikale, RadikalerweiterungMatrizenIdempotente MatrixMinimal polynomialMinimal polynomialMonoidMonoidNebenklasseNebenklasseNebenklassenFaktorring, Repräsentantensystem (Nebenklassen von Ringen)Nicht einordbare spezielle RingeGauß-Algorithmus (Primitivwurzel), Primitivwurzel, Quadratische ZahlringeNormal subgroupNormal subgroupNormale ErweiterungenKonjugierte Elemente, Normal extensionNormalisatorNormalisator (Gruppe)OrbitBahngleichung, Orbit (Group action), Orbit (Gruppenoperation), Representatives (Orbit), Repräsentantensystem (Orbit)OrdnungOrdnung (Gruppe)P-GruppeP-GruppePermutationenSignumsfunktion, Zyklische PermutationPolynomringFormale AbleitungPolynomuntersuchungenIrreduzibelproduktPrimzahlenFermat-Zahl, Mersenne-Zahl, PrimzahlPrimzahlenverallgemeinerungenIrreduzibles ElementProdukte und QuotientenKomplexproduktQuadratische ErweiterungQuadratfreie Zahl, Quadratische ErweiterungQuadratisches ReziprozitätsgesetzJacobi-Symbol, Legendre-Symbol, Quadratischer Rest, Quadratisches ReziprozitätsgesetzQuotientKanonischer Epimorphismus (Gruppe), Repräsentantensystem (Gruppe), Verknüpfung auf Nebenklassen (Gruppe)QuotientengruppeQuotientengruppeRestklassenringePrimer Restklassenring, Quotient RingsRing homomorphismHomomophiesatz für Ringe, Kern (Ring)Ringe mit Charakteristik pFreshmans Dream, Frobenius-Endomorphismus, Ringe mit Charakteristik pSeparable PolynomeSeparable Erweiterung, Separable element, Separable polynomialSpezielle UnterstrukturenMultiplikative GruppeSplitting fieldAlgebraic closure, Algebraically closed fieldStruktur eines RingsDirektes Produkt (Ring)Sylowsätzep-Subgroup, p-SylowgruppeSymmetrische GruppeSymmetrische GruppeSymmetrisches PolynomHauptsatz von symmetrischen PolynomenTeilbarkeitCoprime Numbers, Division mit Rest, Größter gemeinsamer Teiler (Natürliche Zahlen), Kongruenz (Ganze Zahlen)TeilbarkeitenDivisorUnitEinheitengruppe, UnitUntergruppenSubgroup, UntergruppeVektorraumLineare Abbildung, Norm, Normierter VektorraumZahlentheoretische FunktionMultiplikative Zahlentheoretische Funktion, Möbius Mu Funktion, Möbiusscher Umkehrsatz, Summatorische Funktion, Zahlentheoretische FunktionZentrumCentre (Gruppe), Zentrum (Gruppe)Zyklische GruppenEndliche Zyklische Gruppe, Unendliche Zyklische Gruppe, Zyklische Gruppe Zum Vortrag Organisatorisches Verträge Zeiterfassung über Exceltabelle.</description>
-    <pubDate>Mon, 14 Apr 2025 08:57:28 GMT</pubDate>
+    <pubDate>Mon, 14 Apr 2025 09:06:48 GMT</pubDate>
   </item><item>
     <title>Hensel - Geometrie</title>
-    <link>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Hensel---Geometrie</link>
-    <guid>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Hensel---Geometrie</guid>
+    <link>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Hensel---Geometrie</link>
+    <guid>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Hensel---Geometrie</guid>
     <description>Beschreibung Questions TASK WHERE veranstaltung.file = this.file GROUP By &quot;[[&quot;+file.name+&quot;]]&quot; Content SubjectDetailed Content00 Allgemeine MathematikEinheitskreis, ...</description>
-    <pubDate>Mon, 14 Apr 2025 08:57:28 GMT</pubDate>
+    <pubDate>Mon, 14 Apr 2025 09:06:48 GMT</pubDate>
   </item><item>
-    <title>Zenk - Mathematik 1</title>
-    <link>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Zenk---Mathematik-1</link>
-    <guid>https://quartz.jzhao.xyz/Veranstaltungen/Vorlesungen/Zenk---Mathematik-1</guid>
-    <description>Beschreibung Questions TASK WHERE veranstaltung.file = this.file GROUP By &quot;[[&quot;+file.name+&quot;]]&quot; Content SubjectDetailed Content03 Logik und FundamentBeweis ...</description>
-    <pubDate>Mon, 14 Apr 2025 08:57:28 GMT</pubDate>
+    <title>Hensel - Riemannsche Geometrie</title>
+    <link>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Hensel---Riemannsche-Geometrie</link>
+    <guid>https://jeanbellynck.github.io/Veranstaltungen/Vorlesungen/Hensel---Riemannsche-Geometrie</guid>
+    <description>Description Questions TASK WHERE veranstaltung.file = this.file GROUP By &quot;[[&quot;+file.name+&quot;]]&quot; Content SubjectDetailed Content Beschreibung Themen ...</description>
+    <pubDate>Mon, 14 Apr 2025 09:06:48 GMT</pubDate>
   </item>
     </channel>
   </rss>
