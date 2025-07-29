@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 
+
+
+a:not(.navigationbar):link {
+  color: #5b5b4b;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:not(.navigationbar):visited {
+  color: #5b4b4b;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:not(.navigationbar):hover {
+  color: #2b1b2b;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
 :root {
     --xsmall: 320px;
     --small: 480px;
@@ -165,6 +186,20 @@ div.title {
     /* makes the title div take up only 50% of the available width */
 }
 
+
+p {
+    text-align: justify;
+}
+
+li {
+     text-align: justify;
+  margin: 5px 0;
+}
+
+div.links {
+    font-size: 15px;
+}
+
 h1,
 h2,
 h3,
@@ -275,3 +310,4 @@ h4 {
     text-decoration: none;
     text-align: center;
 }
+
